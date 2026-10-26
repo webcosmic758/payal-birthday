@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Payal! 🌷</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8fb;
+    color: #3d2631;
+    overflow-x: hidden;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 182, 193, .18), transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(221, 160, 221, .14), transparent 25%);
+    z-index: -2;
+}
+
+/* ---------- FLOATING PETALS ---------- */
+
+.petal {
+    position: fixed;
+    top: -30px;
+    font-size: 18px;
+    opacity: .65;
+    animation: fall linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.petal:nth-child(1) { left: 8%; animation-duration: 9s; animation-delay: 1s; }
+.petal:nth-child(2) { left: 23%; animation-duration: 12s; animation-delay: 3s; }
+.petal:nth-child(3) { left: 41%; animation-duration: 10s; animation-delay: 5s; }
+.petal:nth-child(4) { left: 63%; animation-duration: 13s; animation-delay: 2s; }
+.petal:nth-child(5) { left: 79%; animation-duration: 11s; animation-delay: 6s; }
+.petal:nth-child(6) { left: 92%; animation-duration: 14s; animation-delay: 4s; }
+
+@keyframes fall {
+    0% {
+        transform: translateY(-30px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* ---------- COMMON ---------- */
+
+section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: min(1000px, 100%);
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 14px 24px;
+    margin-top: 25px;
+    border-radius: 999px;
+    background: #d96c91;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s ease;
+    box-shadow: 0 10px 25px rgba(217,108,145,.22);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #c9577e;
+    box-shadow: 0 15px 30px rgba(217,108,145,.3);
+}
+
+/* ---------- HOME ---------- */
+
+#home {
+    position: relative;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.5), rgba(255,225,235,.7));
+}
+
+.hero {
+    max-width: 800px;
+}
+
+.small-title {
+    color: #c9577e;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 13vw, 8rem);
+    line-height: .95;
+    color: #4b2937;
+}
+
+.hero h1 span {
+    color: #d96c91;
+}
+
+.hero-subtitle {
+    margin-top: 25px;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: #6d505c;
+}
+
+.scroll-note {
+    margin-top: 45px;
+    font-size: 13px;
+    opacity: .6;
+}
+
+/* ---------- BIRTHDAY ---------- */
+
+#birthday {
+    background: #fff;
+}
+
+.cake {
+    font-size: clamp(80px, 20vw, 150px);
+    margin-bottom: 20px;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+@keyframes cakeFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.date {
+    color: #d96c91;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* ---------- SPECIAL THINGS ---------- */
+
+#special {
+    background: linear-gradient(135deg, #fff0f5, #fff9fb);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,.8);
+    padding: 30px 22px;
+    border-radius: 25px;
+    border: 1px solid rgba(217,108,145,.12);
+    box-shadow: 0 15px 40px rgba(100,50,70,.07);
+    transition: .35s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(100,50,70,.12);
+}
+
+.card-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #715763;
+}
+
+/* ---------- LETTER ---------- */
+
+#letter {
+    background: #fff;
+}
+
+.letter-box {
+    max-width: 720px;
+    margin: auto;
+    padding: clamp(30px, 6vw, 60px);
+    background: #fffafc;
+    border: 1px solid #f0dce4;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(80,40,60,.08);
+    text-align: left;
+}
+
+.letter-box .hello {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: #d96c91;
+    margin-bottom: 25px;
+}
+
+.letter-box p {
+    margin-bottom: 18px;
+    color: #59404a;
+}
+
+.signature {
+    text-align: right;
+    font-family: 'DM Serif Display', serif;
+    font-size: 25px;
+    color: #d96c91;
+    margin-top: 30px;
+}
+
+/* ---------- CAKE / WISH ---------- */
+
+#cake {
+    background: linear-gradient(135deg, #fff8fb, #ffeef4);
+}
+
+.wish-box {
+    max-width: 650px;
+    padding: 45px 30px;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 20px 50px rgba(80,40,60,.08);
+}
+
+.big-candle {
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.wish-message {
+    min-height: 30px;
+    margin-top: 20px;
+    color: #d96c91;
+    font-weight: 600;
+}
+
+/* ---------- GIFT ---------- */
+
+#gift {
+    background: #fff;
+}
+
+.gift {
+    font-size: 100px;
+    cursor: pointer;
+    display: inline-block;
+    transition: .4s ease;
+}
+
+.gift:hover {
+    transform: scale(1.12) rotate(-4deg);
+}
+
+.gift-message {
+    max-width: 650px;
+    margin: 20px auto 0;
+    min-height: 30px;
+}
+
+/* ---------- REASONS ---------- */
+
+#reasons {
+    background: linear-gradient(135deg, #fff1f6, #fdf7ff);
+}
+
+.reason-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.reason-card::after {
+    content: "♡";
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 28px;
+    color: rgba(217,108,145,.15);
+}
+
+/* ---------- SECRET ---------- */
+
+#secret {
+    background: #30222a;
+    color: white;
+}
+
+.secret-box {
+    width: min(600px, 100%);
+    padding: 45px 25px;
+    border-radius: 30px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.12);
+    backdrop-filter: blur(10px);
+}
+
+.secret-box h2 {
+    color: #fff;
+}
+
+.secret-input {
+    width: min(350px, 100%);
+    padding: 14px 18px;
+    border: none;
+    outline: none;
+    border-radius: 999px;
+    margin-top: 25px;
+    font-family: inherit;
+    text-align: center;
+}
+
+.secret-result {
+    min-height: 30px;
+    margin-top: 20px;
+    color: #ffc2d7;
+    font-weight: 500;
+}
+
+/* ---------- SECRET HINT ---------- */
+
+.hint-btn {
+    background: transparent;
+    border: 1px solid rgba(255,194,215,.4);
+    color: #ffc2d7;
+    padding: 10px 20px;
+    border-radius: 999px;
+    margin-top: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.hint-btn:hover {
+    background: rgba(255,194,215,.1);
+    transform: translateY(-2px);
+}
+
+.secret-hint {
+    display: none;
+    margin: 15px auto 0;
+    max-width: 400px;
+    color: #ffd9e5;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.secret-hint.show {
+    display: block;
+    animation: hintFade .4s ease;
+}
+
+@keyframes hintFade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- FINAL ---------- */
+
+#final {
+    background:
+        radial-gradient(circle at center, #ffe5ee, #fff8fb 60%);
+}
+
+.final-heart {
+    font-size: 80px;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+.final-title {
+    font-size: clamp(3rem, 10vw, 6rem);
+    color: #d96c91;
+    margin: 20px 0;
+}
+
+.final-text {
+    max-width: 650px;
+    margin: auto;
+    color: #604651;
+}
+
+/* ---------- MUSIC BUTTON ---------- */
+
+.music-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #d96c91;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 10px 25px rgba(217,108,145,.3);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 65px 17px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .letter-box {
+        padding: 30px 22px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 18vw, 6rem);
+    }
+
+    .music-btn {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* ---------- SINGLE PAGE MODE ---------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    padding: 50px 20px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(40px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease,
+        visibility .6s ease;
+
+    overflow-y: auto;
+}
+
+section.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 5;
+}
+
+/* ---------- PHOTO MEMORIES ---------- */
+
+#photos {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 190, 215, .35), transparent 25%),
+        radial-gradient(circle at 85% 80%, rgba(255, 220, 230, .4), transparent 25%),
+        linear-gradient(135deg, #fff0f5, #fff9fb);
+}
+
+.photo-page {
+    width: min(900px, 100%);
+    text-align: center;
+}
+
+.floating-hearts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -30px;
+    font-size: 24px;
+    opacity: .35;
+    animation: floatHeart 7s linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 55%;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 75%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes floatHeart {
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+    to {
+        transform: translateY(-700px) rotate(360deg);
+    }
+}
+
+.photo-page h2 {
+    color: #4b2937;
+    margin-bottom: 12px;
+    text-shadow: 0 0 12px rgba(255, 160, 190, .35);
+}
+
+.photo-subtitle {
+    color: #705561;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-style: italic;
+    opacity: .85;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.photo-card {
+    background: white;
+    padding: 10px 10px 18px;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(80,40,60,.12);
+    border: 1px solid rgba(255, 190, 210, .45);
+    transition: .35s ease;
+}
+
+.photo-card:hover {
+
+    transform: translateY(-7px) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(80,40,60,.18);
+    filter: brightness(1.02);
+}
+
+.photo-card:nth-child(2):hover {
+    transform: translateY(-7px) rotate(1deg);
+}
+
+.photo-card:nth-child(3):hover {
+    transform: translateY(-7px) rotate(0.5deg);
+}
+
+.photo-card:nth-child(2) {
+    transform: rotate(1deg);
+}
+
+.photo-card:nth-child(3) {
+    transform: rotate(-0.5deg);
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-1deg);
+}
+
+.photo-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 20%,
+        rgba(255,255,255,.45) 50%,
+        transparent 80%
+    );
+    transform: translateX(-100%);
+    transition: .7s ease;
+}
+
+.photo-card:hover::after {
+    transform: translateX(100%);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.photo-note {
+    margin-top: 10px;
+    padding-bottom: 5px;
+    color: #6d505c;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.photo-note::before {
+    content: "♡";
+    margin-right: 6px;
+    opacity: .7;
+}
+
+.previous-btn {
+    margin-top: 15px;
+    background: transparent;
+    border: 1px solid rgba(75, 41, 55, .25);
+    color: #4b2937;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.previous-btn:hover {
+    background: rgba(255, 190, 215, .25);
+    transform: translateX(-4px);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+
+    .photo-card img {
+        height: auto;
+        max-height: 500px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating petals -->
+<div class="petal">🌸</div>
+<div class="petal">🌷</div>
+<div class="petal">♡</div>
+<div class="petal">🌸</div>
+<div class="petal">✦</div>
+<div class="petal">🌷</div>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+
+    <div class="container hero">
+
+        <div class="small-title">
+            A little something for you
+        </div>
+
+        <h1>
+            For <span>Payal</span> 🌷
+        </h1>
+
+        <p class="hero-subtitle">
+            A little corner of the internet for my wonderful sister. 💗
+        </p>
+
+        <button class="btn" onclick="go('birthday')">
+            Open Your Surprise ✨
+        </button>
+
+        <div class="scroll-note">
+            ↓ There's more waiting for you
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BIRTHDAY ================= -->
+
+<section id="birthday">
+
+    <div class="container">
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <div class="date">
+            24 • 10 • 2026
+        </div>
+
+        <h2>
+            Happy Birthday, Payal! 🌷
+        </h2>
+
+        <p style="max-width:650px;margin:auto;color:#6b515b;">
+            Today is all about celebrating my amazing sister.
+            Thank you for being such a special part of my life.
+            You deserve all the happiness in the world. ✨
+        </p>
+
+        <button class="btn" onclick="go('special')">
+            Keep going 💗
+        </button>
+
+        <button class="previous-btn" onclick="go('home')">
+        ← Previous
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= THREE THINGS ================= -->
+
+<section id="special">
+
+    <div class="container">
+
+        <div class="small-title">
+            Just a few things
+        </div>
+
+        <h2>
+            Three Things I Love About You 💗
+        </h2>
+
+        <p style="max-width:650px;margin:auto;color:#705561;">
+            A sister like you makes ordinary days brighter.
+            Here are a few little things that make you so special. 🌷
+        </p>
+
+        <div class="cards">
+
+            <div class="card"
+                 onclick="cardMessage(this,'Your smile can make even an ordinary day feel brighter. 🌸')">
+
+                <div class="card-icon">🌸</div>
+
+                <h3>Your Smile</h3>
+
+                <p>
+                    Tap me ✨
+                </p>
+
+            </div>
+
+
+            <div class="card"
+                 onclick="cardMessage(this,'Having you as my sister makes life more special. ✨')">
+
+                <div class="card-icon">🌷</div>
+
+                <h3>Your Kind Heart</h3>
+
+                <p>
+                    Tap me ✨
+                </p>
+
+            </div>
+
+
+            <div class="card"
+                 onclick="cardMessage(this,'You dont have to be perfect to be an amazing sister. Just keep being you. 🦋')">
+
+                <div class="card-icon">🦋</div>
+
+                <h3>Simply You</h3>
+
+                <p>
+                    Tap me ✨
+                </p>
+
+            </div>
+
+        </div>
+
+        <button class="btn" onclick="go('letter')">
+            There's a little letter 💌
+        </button>
+        
+        <button class="previous-btn" onclick="go('birthday')">
+        ← Previous
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LETTER ================= -->
+
+<section id="letter">
+
+    <div class="container">
+
+        <div class="small-title">
+            From the heart
+        </div>
+
+        <h2>
+            A Letter for My Sister 💌
+        </h2>
+
+        <div class="letter-box">
+
+            <div class="hello">
+                Dear Payal,
+            </div>
+
+            <p>
+                Having you as my sister is something I will always be grateful for.
+                A few words could never explain how much you mean to me.
+            </p>
+
+            <p>
+                I may not say it every day, but I truly appreciate you.
+                I hope this little website reminds you of that. 💗
+            </p>
+
+            <p>
+                I hope this year brings you endless reasons to smile,
+                success in everything you work for,
+                and peaceful moments whenever you need them.
+            </p>
+
+            <p>
+                Keep smiling, keep believing in yourself,
+                and keep chasing every dream in your heart.
+                I'll always be cheering you on. 🌷
+            </p>
+
+            <p>
+                No matter how busy life gets, remember that you have a brother
+                who cares about you and wishes the very best for you.
+                You deserve so much love and happiness. 💗
+            </p>
+
+            <div class="signature">
+                — Your brother, with love 🌷
+            </div>
+
+        </div>
+
+        <button class="btn" onclick="go('cake')">
+            Make a birthday wish 🎂
+        </button>
+        
+        <button class="previous-btn" onclick="go('special')">
+        ← Previous
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WISH ================= -->
+
+<section id="cake">
+
+    <div class="container">
+
+        <div class="wish-box">
+
+            <div class="big-candle">
+                🕯️
+            </div>
+
+            <h2>
+                Make a Birthday Wish ✨
+            </h2>
+
+            <p>
+                Close your eyes for a moment,
+                think of your biggest birthday wish,
+                and press the button when you're ready. ✨
+            </p>
+
+            <button class="btn" onclick="makeWish()">
+                Wish Made ✨
+            </button>
+             
+            <button class="previous-btn" onclick="go('letter')">
+            ← Previous
+            </button>
+
+            <div class="wish-message" id="wishMessage"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GIFT ================= -->
+
+<section id="gift">
+
+    <div class="container">
+
+        <div class="small-title">
+            One more thing...
+        </div>
+
+        <h2>
+            A Little Surprise for You 🎁
+        </h2>
+
+        <p style="max-width:600px;margin:auto;">
+            This little surprise comes with lots of love
+            for the sister who deserves to feel celebrated. 💗
+        </p>
+
+        <div class="gift" onclick="openGift()">
+            🎁
+        </div>
+
+        <div class="gift-message" id="giftMessage"></div>
+
+        <button class="btn" onclick="go('reasons')">
+            A few reasons to smile 🌷
+        </button>
+        
+        <button class="previous-btn" onclick="go('cake')">
+        ← Previous
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REASONS ================= -->
+
+<section id="reasons">
+
+    <div class="container">
+
+        <div class="small-title">
+            Remember these
+        </div>
+
+        <h2>
+            A Few Reminders for My Sister 🌷
+        </h2>
+
+        <p style="max-width:650px;margin:auto;color:#705561;">
+            Whenever you need a little encouragement, remember these things. 💗
+        </p>
+
+        <div class="cards">
+
+            <div class="card reason-card">
+
+                <div class="card-icon">
+                    🌸
+                </div>
+
+                <h3>
+                    Keep Smiling
+                </h3>
+
+                <p>
+                    Your smile brings warmth to the people around you.
+                    Never forget how wonderful you are.
+                </p>
+
+            </div>
+
+
+            <div class="card reason-card">
+
+                <div class="card-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Keep Shining
+                </h3>
+
+                <p>
+                    Keep growing, shining, and being proud of yourself.
+                    Your future has so many beautiful possibilities.
+                </p>
+
+            </div>
+
+
+            <div class="card reason-card">
+
+                <div class="card-icon">
+                    🦋
+                </div>
+
+                <h3>
+                    Be You
+                </h3>
+
+                <p>
+                    You are loved for who you are.
+                    Never feel you have to be someone else.
+                </p>
+
+            </div>
+
+        </div>
+
+        <button class="btn" onclick="go('secret')">
+            There's still a secret 👀
+        </button>
+        <button class="previous-btn" onclick="go('gift')">
+        ← Previous
+        </button>
+    </div>
+
+</section>
+
+
+<!-- ================= SECRET ================= -->
+
+<section id="secret">
+
+    <div class="container">
+
+        <div class="secret-box">
+
+            <div class="small-title" style="color:#ffc2d7;">
+                Hmm... 👀
+            </div>
+
+            <h2>
+                A Little Sister Secret 👀
+            </h2>
+
+            <p>
+                There's one more little surprise waiting for you.
+                Enter the secret word to unlock it. 💗
+            </p>
+
+            <input
+                class="secret-input"
+                id="secretInput"
+                type="text"
+                placeholder="Enter the secret word..."
+                autocomplete="off"
+            >
+
+            <br>
+
+            <button class="btn" onclick="checkSecret()">
+             Unlock 🔐
+            </button>
+
+            <button class="hint-btn" onclick="showHint()">
+            💡 Need a hint?
+            </button>
+
+            <div class="secret-hint" id="secretHint">
+             Hint: tera naam hai pagal iska password bawliii. 💗
+            </div>
+
+            <div class="secret-result" id="secretResult"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PHOTOS ================= -->
+
+<section id="photos">
+
+<div class="floating-hearts">
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+</div>
+
+    <div class="container photo-page">
+
+        <div class="small-title">
+            A few beautiful memories ✨
+        </div>
+
+        <h2>
+            payal bawalii! 📸
+        </h2>
+
+        <p class="photo-subtitle">
+            Some moments deserve their own little corner. 🌷
+        </p>
+
+        
+<div class="photo-gallery">
+    <div class="photo-card">
+        <img src="paya-photo-1.png" alt="pagal">
+        <div class="photo-note">🌸 A beautiful moment</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="payal-photo-2.png" alt="bawalii">
+        <div class="photo-note">✨ A lovely smile</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="payal-photo-3.png" alt="kaaliii">
+        <div class="photo-note">💗 Stay happy always</div>
+    </div>
+</div>
+
+
+        <button class="btn" onclick="go('final')">
+            Continue 💗
+        </button>
+        <button class="previous-btn" onclick="go('secret')">
+        ← Previous
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= FINAL ================= -->
+
+<section id="final">
+
+    <div class="container">
+
+        <div class="final-heart">
+            💗
+        </div>
+
+        <h1 class="final-title">
+            Happy Birthday, Payal! 🌷
+        </h1>
+
+        <p class="final-text">
+            May your life be filled with beautiful moments,
+            genuine smiles, peaceful days, and countless reasons
+            to be happy. You deserve the very best, sis. 💗
+        </p>
+
+        <p style="margin-top:25px;color:#d96c91;font-weight:600;">
+            Keep smiling, sis. I'm always rooting for you. 🌷
+        </p>
+
+        <button class="btn" onclick="go('home')">
+            Start Again ↺
+        </button>
+        <button class="previous-btn" onclick="go('photos')">
+          ← Previous
+        </button>
+    </div>
+
+</section>
+
+<!-- MUSIC / AMBIENCE BUTTON -->
+
+<audio id="bgMusic" loop>
+    <source src="your-summer-my-sea.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+    ♪
+</button>
+
+
+<script>
+
+/* ================= NAVIGATION ================= */
+
+const ids = [
+    'home',
+    'birthday',
+    'special',
+    'letter',
+    'cake',
+    'gift',
+    'reasons',
+    'secret',
+    'final'
+];
+
+function go(id) {
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    const target = document.getElementById(id);
+
+    if (target) {
+        target.classList.add('active');
+    }
+
+    if (id === 'birthday') {
+        const music = document.getElementById('bgMusic');
+        const btn = document.getElementById('musicBtn');
+
+        if (music) {
+            music.play().then(() => {
+                musicOn = true;
+
+                if (btn) {
+                    btn.textContent = '♫';
+                    btn.style.transform = 'rotate(10deg)';
+                }
+            }).catch(error => {
+                console.log('Music could not start:', error);
+            });
+        }
+    }
+}
+
+/* ================= CARD CLICK ================= */
+
+function cardMessage(card, message) {
+
+    const p = card.querySelector('p');
+
+    p.textContent = message;
+
+    card.style.transform = 'translateY(-8px) scale(1.02)';
+
+    setTimeout(() => {
+        card.style.transform = '';
+    }, 500);
+}
+
+
+/* ================= BIRTHDAY WISH ================= */
+
+function makeWish() {
+
+    const message = document.getElementById('wishMessage');
+
+    message.innerHTML =
+        '✨ Wish received! May this year bring you beautiful surprises. 🌷';
+
+    createConfetti();
+
+    setTimeout(() => {
+        go('gift');
+    }, 3000);
+
+}
+
+
+/* ================= GIFT ================= */
+
+function openGift() {
+
+    const message = document.getElementById('giftMessage');
+
+    message.innerHTML =
+        '🎀 Surprise! You are not just my sister; you are someone I am always wishing happiness for. 💗';
+
+    createConfetti();
+
+}
+
+
+/* ================= SECRET ================= */
+
+function checkSecret() {
+
+    const input =
+        document.getElementById('secretInput')
+        .value
+        .trim()
+        .toLowerCase();
+
+    const result =
+        document.getElementById('secretResult');
+
+   const correctWords = [
+    'payal',
+    'birthday',
+    'your-secret-word'
+];
+
+    if (correctWords.includes(input)) {
+
+        result.innerHTML =
+            '🔓 You found the surprise! Happy Birthday, Payal! 💗';
+
+        setTimeout(() => {
+            go('photos');
+        }, 1000);
+
+    } else {
+
+    result.innerHTML =
+        "Not quite! Try again, Payal. 👀";
+}
+
+}
+
+
+function showHint() {
+    const hint = document.getElementById('secretHint');
+    hint.classList.toggle('show');
+}
+
+
+/* ================= ENTER KEY FOR SECRET ================= */
+
+document
+    .getElementById('secretInput')
+    .addEventListener('keydown', function(event) {
+
+        if (event.key === 'Enter') {
+            checkSecret();
+        }
+
+    });
+
+
+/* ================= CONFETTI ================= */
+
+function createConfetti() {
+
+    const symbols = [
+        '🌸',
+        '🌷',
+        '✨',
+        '💗',
+        '♡',
+        '🎉'
+    ];
+
+    for (let i = 0; i < 25; i++) {
+
+        const piece = document.createElement('div');
+
+        piece.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        piece.style.position = 'fixed';
+        piece.style.left =
+            Math.random() * 100 + 'vw';
+
+        piece.style.top = '-30px';
+
+        piece.style.fontSize =
+            (14 + Math.random() * 18) + 'px';
+
+        piece.style.zIndex = '100';
+
+        piece.style.pointerEvents = 'none';
+
+        document.body.appendChild(piece);
+
+        const duration =
+            2500 + Math.random() * 2500;
+
+        piece.animate(
+            [
+                {
+                    transform: 'translateY(0) rotate(0deg)',
+                    opacity: 1
+                },
+                {
+                    transform:
+                        `translateY(110vh) rotate(${360 + Math.random() * 360}deg)`,
+                    opacity: 0
+                }
+            ],
+            {
+                duration: duration,
+                easing: 'ease-out'
+            }
+        );
+
+        setTimeout(() => {
+            piece.remove();
+        }, duration);
+
+    }
+}
+
+
+/* ================= MUSIC BUTTON ================= */
+
+/*
+   No external music is used here.
+   The button simply changes its icon so the website
+   stays completely self-contained.
+*/
+
+let musicOn = false;
+
+async function toggleMusic() {
+    const music = document.getElementById('bgMusic');
+    const btn = document.getElementById('musicBtn');
+
+    if (music.paused) {
+        try {
+            await music.play();
+            musicOn = true;
+            btn.textContent = '♫';
+            btn.style.transform = 'rotate(10deg)';
+        } catch (error) {
+            console.log('Music could not start:', error);
+        }
+    } else {
+        music.pause();
+        musicOn = false;
+        btn.textContent = '♪';
+        btn.style.transform = 'rotate(0deg)';
+    }
+}
+
+async function startSurprise() {
+    const music = document.getElementById('bgMusic');
+    const btn = document.getElementById('musicBtn');
+
+    try {
+        await music.play();
+
+        musicOn = true;
+        btn.textContent = '♫';
+        btn.style.transform = 'rotate(10deg)';
+    } catch (error) {
+        console.log('Music could not start:', error);
+    }
+
+    go('birthday');
+}
+
+/* ================= WELCOME EFFECT ================= */
+
+window.addEventListener('load', () => {
+
+    const firstPage = document.getElementById('home');
+
+    if (firstPage) {
+        firstPage.classList.add('active');
+    }
+
+    setTimeout(() => {
+        createConfetti();
+    }, 700);
+
+});
+
+</script>
+
+</body>
+</html>
